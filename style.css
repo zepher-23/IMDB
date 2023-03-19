@@ -1,0 +1,112 @@
+/* Style for Webkit Browsers */
+::-webkit-scrollbar {
+    width: 4px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #f5f5f5;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #969696;
+    border-radius: 2px;
+}
+
+#fav a{
+    display: flex;
+margin-top:4px;
+margin-left:20px;
+    color: rgb(31, 158, 80);
+    transition: 0.2s ease-in-out;
+}
+
+#fav a:hover{
+    transform: scale(1.1);
+}
+.imdb{
+    color: rgb(228, 228, 0);
+    font-size: large;
+    font-weight: 600;
+}
+#section2{
+    max-height: 75vh;
+}
+
+#list{
+    max-height: 70vh;
+}
+
+#main{
+max-height: 100vh;
+
+}
+.list-block{
+    display:flex;
+    flex-direction: row;
+}
+
+.movie-title{
+  width:80%  ;
+  text-decoration: none;
+  color:inherit;
+
+}
+
+.movie-title:hover{
+    color:rgb(31, 158, 80);
+}
+.toast-icon{
+width:20px;
+height:20px;
+
+}
+.year-title{
+    width:20%;
+    margin-left: 100px;
+}
+.iconDiv{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width:100%;
+}
+.bi-star-fill{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+border-radius: 10px;
+margin-right:20px;
+    color: rgba(0, 0, 0, 0.19);
+    width:50px;
+    height:50px;
+    /* transition:0.1s ease-in-out; */
+}
+
+.bi-star-fill:hover{
+    cursor: pointer;
+    
+}
+.bi-star-fill:active{
+    transform:scale(0.92);
+}
+
+#carouselExampleAutoplaying, #carouselExampleAutoplaying1 {
+    max-height: 80vh;
+}
+
+button:active{
+transform: scale(0.95);
+transition: 0.1s ease-in-out;
+}
+button{
+    border:none;
+    outline:none;
+}
+#list-item{
+    list-style-type: none;
+}
+
+#Poster{
+    /* width:100px; */
+
+}
