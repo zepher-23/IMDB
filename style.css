@@ -4,14 +4,16 @@
 }
 
 ::-webkit-scrollbar-track {
-    background-color: #f5f5f5;
+    /* background-color: #f5f5f5; */
 }
 
 ::-webkit-scrollbar-thumb {
     background-color: #969696;
     border-radius: 2px;
 }
-
+body{
+    /* overflow-y: hidden; */
+}
 #fav a{
     display: flex;
 margin-top:4px;
@@ -29,25 +31,29 @@ margin-left:20px;
     font-weight: 600;
 }
 #section2{
-    max-height: 93vh;
+    min-height: 75vh;
     background-color: #fafafa;
-    width:50%
+    border-radius: 20px;
+    padding: 20px;
 }
 
 #list{
-    max-height: 100vh;
+    max-height: 75vh;
 }
 
 #main{
-max-height: 100vh;
+height: 100%;
 background-color: #1b1b1b;
 
 }
 .list-block{
     display:flex;
     flex-direction: row;
+    transition: opacity 0.2s ease-in-out;
 }
-
+.hidden{
+    opacity:0;
+}
 .movie-title{
   width:80%  ;
   text-decoration: none;
@@ -73,23 +79,36 @@ height:20px;
     align-items: center;
     width:100%;
 }
-.bi-star-fill{
+ .bi-trash3-fill{
     display: flex;
     justify-content: center;
     align-items: center;
 border-radius: 10px;
 margin-right:20px;
-    color: rgba(0, 0, 0, 0.19);
+    color: rgb(216, 78, 78);
     width:50px;
     height:50px;
     /* transition:0.1s ease-in-out; */
 }
 
-.bi-star-fill:hover{
+.bi-star-fill {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    margin-right: 20px;
+    color: rgba(0, 0, 0, 0.19);
+    width: 50px;
+    height: 50px;
+    /* transition:0.1s ease-in-out; */
+}
+
+.bi-star-fill:hover, .bi-trash3-fill{
     cursor: pointer;
     
 }
-.bi-star-fill:active{
+
+.bi-star-fill:active ,.bi-trash3-fill:active{
     transform:scale(0.92);
 }
 
@@ -113,3 +132,33 @@ button{
     /* width:100px; */
 
 }
+
+/* favoite list styles */
+
+.fav-container{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fafafa;
+    padding:30px;
+    margin:30px;
+    width:50vw;
+    max-height:75vh;
+    overflow: scroll;
+    
+}
+.fav-list-container{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction: column;
+    width:100%;
+
+}
+
+.fav-list-container h1{
+    margin-top:20px;
+    color:rgb(31, 158, 80);
+}
+hello

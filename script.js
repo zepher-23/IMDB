@@ -149,7 +149,7 @@ const addToFav = (data) => {
   localStorage.setItem(data.imdbID, data.Title);
  
 
-  
+
   
   
 }
@@ -165,3 +165,4 @@ const removeFromFav = (data) => {
   
   
 }
+
