@@ -14,7 +14,7 @@ const elementCountry = document.getElementById('country');
 const elementGenre = document.getElementById('genre');
 
 
-const apiUrl = `http://www.omdbapi.com/?apikey=3068ccba&type=movie&i=${id}`;
+const apiUrl = `https://www.omdbapi.com/?apikey=3068ccba&type=movie&i=${id}`;
 
 // fetch id details
 fetch(apiUrl)

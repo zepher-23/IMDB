@@ -3,7 +3,7 @@
 
 for (let i = 0; i < localStorage.length; i++) {
     const key = localStorage.key(i);
-const url = `http://www.omdbapi.com/?apikey=3068ccba&type=movie&i=${key}`;
+const url = `https://www.omdbapi.com/?apikey=3068ccba&type=movie&i=${key}`;
     fetch(url).then(response => response.json()).then(data => {
         addToList(data);
   })

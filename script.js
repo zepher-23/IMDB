@@ -16,7 +16,7 @@ searchBox.addEventListener("input", () => {
   
 // URL template
   
-const apiUrl = `http://www.omdbapi.com/?apikey=3068ccba&type=movie&page=1&s=${searchTitle}`;
+const apiUrl = `https://www.omdbapi.com/?apikey=3068ccba&type=movie&page=1&s=${searchTitle}`;
 
     fetch(apiUrl)
         .then(response => response.json())
