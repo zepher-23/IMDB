@@ -1,3 +1,4 @@
+// get the id from the url
 const params = new URLSearchParams(window.location.search);
 const id = params.get('data');
 
@@ -15,7 +16,7 @@ const elementGenre = document.getElementById('genre');
 
 const apiUrl = `http://www.omdbapi.com/?apikey=3068ccba&type=movie&i=${id}`;
 
-
+// fetch id details
 fetch(apiUrl)
     .then(response => response.json())
     .then(data => {
@@ -59,11 +60,9 @@ insertInfo(writer,elementWriter);
         
 })
 
+// insert data into html on the front end 
 const insertInfo =(data,elementName) =>{
     const element = document.createElement('p');
     element.textContent = data;
     elementName.appendChild(element);
-
-
-
 }

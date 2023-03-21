@@ -13,18 +13,14 @@ const url = `http://www.omdbapi.com/?apikey=3068ccba&type=movie&i=${key}`;
 const addToList = (data) => {
    if (data.Title === undefined) {
             }
-            else {
-
-
-     const listBlock = document.createElement('div');
-                 listBlock.classList.add('list-block','container-md','p-3','col-lg-12');
-
-            const newMovie = document.createElement('a');
-     const newYear = document.createElement('div');
-
-     const newPoster = document.createElement('img');
-          const iconDiv = document.createElement('div');
-     const newFav = document.createElement('i')
+   else {
+     // create required elements
+    const listBlock = document.createElement('div');
+    const newMovie = document.createElement('a');
+    const newYear = document.createElement('div');
+    const newPoster = document.createElement('img');
+    const iconDiv = document.createElement('div');
+    const newFav = document.createElement('i')
      
      newMovie.textContent = data.Title;
      newMovie.href= `./movie.html?data=${data.imdbID}`
@@ -36,29 +32,27 @@ const addToList = (data) => {
               }
               else {
                 newPoster.src = data.Poster;
-            newPoster.alt = 'Poster image';
-              }
-            
-          newMovie.classList.add('movie-title', 'p-2');
+                newPoster.alt = 'Poster image';
+     }
+     
+     // add classes to the created elements
 
-          newYear.classList.add('year-title','p-2','ml-3','text-black-50')
-
-              
-
-     newPoster.classList.add('col-lg-1');
-     iconDiv.classList.add('iconDiv')
-       newFav.classList.add('bi', 'bi-trash3-fill', 'fs-2');
-    //    newFav.style.color = "rgb(31, 158, 80)";
+    listBlock.classList.add('list-block','container-md','p-3','col-lg-12');
+    newMovie.classList.add('movie-title', 'p-2');
+    newYear.classList.add('year-title', 'p-2', 'ml-3', 'text-black-50');
+    newPoster.classList.add('col-lg-1');
+    iconDiv.classList.add('iconDiv')
+    newFav.classList.add('bi', 'bi-trash3-fill', 'fs-2');
+    
      
     //event listner for adding and removing from favorites
-     newFav.addEventListener('click', () => {
+    newFav.addEventListener('click', () => {
       
-     removeFromFav(data);
+    removeFromFav(data);
      //remove toast
-     const toastContent = document.getElementById('toast-content-remove');
-     toastContent.innerHTML = data.Title;
-     const toastLiveExample = document.getElementById('liveToastRemove')
-     
+    const toastContent = document.getElementById('toast-content-remove');
+    toastContent.innerHTML = data.Title;
+    const toastLiveExample = document.getElementById('liveToastRemove');
     const toast = new bootstrap.Toast(toastLiveExample)
 
          toast.show()
@@ -72,29 +66,21 @@ const addToList = (data) => {
  
 });
 
-
+// add elements to the front end
+     
      listBlock.appendChild(newPoster);
      listBlock.appendChild(newMovie);
      listBlock.appendChild(newYear);
      iconDiv.appendChild(newFav);
      listBlock.appendChild(iconDiv);
-     
-
-            list.appendChild(listBlock);
+     list.appendChild(listBlock);
               
             }
 
 }
 
-
-
 // remove from favorites
 
 const removeFromFav = (data) => {
-
-  
-  
   localStorage.removeItem(data.imdbID);
-  
-  
 }
